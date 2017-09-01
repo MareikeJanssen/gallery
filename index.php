@@ -9,8 +9,6 @@
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/gallery.js"></script>
     </head>
-	
-	
 	<?php
 		# paths to the images
 		$pathimg = 'img/';
@@ -59,13 +57,12 @@
 		}
 
 		# close path, release pointer
-        closedir($pointer);
-    ?>
+        	closedir($pointer);
+    	?>
 	
-	
-    <body>
-        <div id="gallery">
-            <section id="bigsect">
+	<body>
+		<div id="gallery">
+			<section id="bigsect">
 				<div id="bigpicbox">
 					<?php
 						# output of the first image in the folder
@@ -89,8 +86,7 @@
 						<img id="forth" src="buttons/arrowRight.jpg" >
 					</div>
 				</div>
-            </section>
-			
+			</section>
 			<section id="thumbwrapper">
 				<div id="thumbs">
 					<ul id="thumblist">
@@ -101,15 +97,14 @@
 								if($key===0){
 									$thumbclass = 'current thumbimg';
 								}
-									echo 
-									'<li>
-										<img 
-											id="img'.$key.'"
-											class="'.$thumbclass.'"
-											src="'.$value['thumb'].$value['file'].'" 
-											title="'.$value['alt'].'" 
-											alt="'.$value['alt'].'"
-											onclick="showPic('.$key.')">
+								echo '
+									<li><img 
+										id="img'.$key.'"
+										class="'.$thumbclass.'"
+										src="'.$value['thumb'].$value['file'].'" 
+										title="'.$value['alt'].'" 
+										alt="'.$value['alt'].'"
+										onclick="showPic('.$key.')">
 									</li>';
 							}
 						?>
@@ -117,15 +112,15 @@
 				</div>
 				<div class="buttonbox left">
 					<div class="circle" onclick="thumbsBackward()">
-						<img id="backthumbs" src="buttons/arrowLeft.jpg">
+						<img id="backthumbs" src="buttons/arrowLeft.jpg">					</div>
 					</div>
 				</div>
 				<div class="buttonbox right">
 					<div class="circle" onclick="thumbsForward()">				
-						<img id="forththumbs"src="buttons/arrowRight.jpg">
+						<img id="forththumbs" src="buttons/arrowRight.jpg">
 					</div>
 				</div>
 			</section>
-        </div>		
-    </body>
+		</div>		
+	</body>
 </html>
