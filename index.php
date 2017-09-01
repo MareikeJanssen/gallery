@@ -23,7 +23,7 @@
 
 		# if directory does not exist, then abort script
 		if (!is_dir($paththumb)) {
-			die('Leider wurde das Verzeichnis nicht gefunden!</div></body></html>');
+			die('Sorry, the directory was not found!</div></body></html>');
 		}
 
 		# open directory and set pointers to the beginning
