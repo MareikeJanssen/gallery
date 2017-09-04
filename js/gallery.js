@@ -98,7 +98,7 @@ function thumbsBackward(){
 	}
 };
 
-// sorts thumbs in right direction
+// sorts thumbs in right order
 function sortThumbs(thumbcount){
 	if(isImgs()){
 		var m = 0;
